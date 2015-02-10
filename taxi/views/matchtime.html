@@ -1,14 +1,18 @@
 <!doctype html> 
 <html>
    <head>
+       
         <link type="text/css" rel="stylesheet" href="../static/css/matchtime.css" />
         <link type="text/css" rel="stylesheet" href="../static/css/bootstrap.css" />
+        
+
+
    </head>
    
    <body> 
 
      <div class="panel panel-default">
-     	<div class="page-header">
+     	<div class="page-header" id="header">
      		<h1>Match Your Time<small></small></h1>
      	</div>
      	<div class="panel-body">
@@ -21,7 +25,7 @@
      	</button>
 </div>
 <div>
-     	<table class="table">
+     	<table class="table" id="matchtable">
      		<tr>
      			<td>#</td>
      			<td>Time</td>
@@ -63,7 +67,7 @@
  </div>
   
     <nav>
-	 <ul class="pagination">
+	 <ul class="pagination" id="timelist">
 		<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
 		<li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
 		<li><a href="#">2</a></li>
@@ -74,11 +78,14 @@
  </nav>
  <div>
     <p>No Match?</p>
-    <button type="button" class="btn btn-default">
+    <a href="../views/groupinfo.html">
+    <button type="button" class="btn btn-default" id="start_group">
      		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Start a Carpool Group
     </button>
+    </a>
  </div>
-
+ <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+ <script type="text/javascript" src="../static/js/site.js"></script>
    </body> 
 
 
