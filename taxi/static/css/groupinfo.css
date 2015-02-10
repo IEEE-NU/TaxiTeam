@@ -1,0 +1,17 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.container-fluid
+{
+	background-color: yellow;
+	border-color: black;
+	text-align: center;
+}
+
+.btn-group
+{
+	padding-top: 1%;
+}
+
