@@ -3,17 +3,13 @@
 	
 	<link rel="stylesheet" type="text/css" href="../static/css/groupinfo.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script text="text/javascript" src="../static/js/bootstrap.js"></script>
-	<body class="container">
-		<div>
-			<div>
-				<h1><b>New Group Information</b></h1>
-				<h4>Step3: Start your taxi group and post it on our website.</h4>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Time of Departure</span>
-
+	
+	<body>
+		<div class="jumbotron">
+			<div class="container-fluid" id="groupheader">
+				<h1>Group Information</h1>
+				<div class="dropdown_time">
+					<h3>Time of Departure</h3>
 					<select name="time">
 						<option value="12:00">12:00 AM
 						<option value="12:30">12:30 AM
@@ -65,8 +61,8 @@
 						<option value="11:30">11:30 PM
 					</select>
 				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Date of Departure</span>
+				<div class="dropdown_date">
+					<h3>Date of Departure</h3>
 					 <select name="month">
 						<option value="1">January
 						<option value="2">February
@@ -119,25 +115,19 @@
 						<option value="2016">2016
 					</select>
 				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">How many people already in your group?</span>
-					<!--is this the right question-->
+				<div class="num_people">
+					<h3>How many people in your party?</h3>
 					<select>
 						<option value="1">1
 						<option value="2">2
-						<option value="3">3	
-						<option value="4">4	
-						<option value="5">5					
+						<option value="3">3					
 					</select>
 				</div>
-
-				
-  				<div>
-  					<a href="../views/matchtime.html">
-  						<button type="submit" class="btn btn-primary">Submit</button>
-  					</a>
-  				</div>
-				
+				<div class="btn-group" role="group" aria-label="...">
+					<!-- <a href="../views/matchtime.html"> -->
+  					<button type="button" class="btn btn-default" id="submit">Submit</button>
+  					<!-- </a> -->
+				</div>
 
 			
 			</div>
