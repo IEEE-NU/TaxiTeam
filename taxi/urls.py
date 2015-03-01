@@ -9,5 +9,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.index),
-    url(r'^matchtime/', views.matchtime)
+    url(r'^matchtime/', views.matchtime),
+    url(r'^groupinfo/', views.groupinfo),
 )

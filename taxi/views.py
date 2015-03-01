@@ -6,3 +6,5 @@ def index(request):
 def matchtime(request):
 	return render(request, 'matchtime.html', {})
 
+def groupinfo(request):
+	return render(request, 'groupinfo.html',{})
