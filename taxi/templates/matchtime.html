@@ -13,6 +13,14 @@
    		<h1><b>Match Your Time</b></h1>
         <h4>Step2: Choose the taxi group that fits your schedule and contact the group member.</h4>
      	
+        <div>
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
+        </div>
+
+
         <div class="panel panel-default" class="panel-body">
      		<div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Date of Departure: 02/31/2015</span>
