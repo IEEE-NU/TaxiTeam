@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Taxi_Group
+from .models import Group
 
-admin.site.register(Taxi_Group)
+admin.site.register(Group)
 
