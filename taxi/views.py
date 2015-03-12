@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from .forms import TaxiGroupForm
 import datetime
+
 
 def index(request):
     form = TaxiGroupForm()
@@ -13,7 +16,7 @@ def index(request):
         Group.num_ppl = 2
 
         Group.save()
-        return redirect('matchtime/', pk=Group.pk)
+        return redirect('/matchtime', pk=Group.pk)
     else:
         form = TaxiGroupForm()
     return render(request, 'index.html', {'form': form})

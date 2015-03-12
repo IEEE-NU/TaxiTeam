@@ -6,4 +6,4 @@ class TaxiGroupForm(forms.ModelForm):
 
     class Meta:
         model = Group
-        fields = ('start_location', 'destination')
+        fields = ('num_ppl','start_location', 'destination')
