@@ -1,11 +1,9 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 from .forms import TaxiGroupForm
 import datetime
 
 def index(request):
-    return render(request, 'index.html', {})
-
-def matchtime(request):
     form = TaxiGroupForm()
     if request.method == "POST":
         form = TaxiGroupForm(request.POST)
@@ -15,10 +13,13 @@ def matchtime(request):
         Group.num_ppl = 2
 
         Group.save()
+        return redirect('matchtime/', pk=Group.pk)
     else:
         form = TaxiGroupForm()
+    return render(request, 'index.html', {'form': form})
 
-    return render(request, 'matchtime.html', {'form': form})
+def matchtime(request):
+    return render(request, 'matchtime.html', {})
 
 
 def groupinfo(request):
